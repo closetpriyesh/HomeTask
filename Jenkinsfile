@@ -24,7 +24,7 @@ pipeline {
     stage('archive') {
       steps {
         echo 'Archiving out!!'
-        archiveArtifacts 'target/*.war'
+        archiveArtifacts '*.war'
       }
     }
     
