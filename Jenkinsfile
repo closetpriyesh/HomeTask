@@ -3,19 +3,19 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        echo 'echo building'
+        echo 'Building'
       }
     }
 
     stage('Test') {
       steps {
-        echo 'echo test'
+        echo 'Testing'
       }
     }
 
     stage('Notify') {
       steps {
-        echo 'echo notify'
+        echo 'Notifying'
       }
     }
 
