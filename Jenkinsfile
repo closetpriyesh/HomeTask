@@ -13,7 +13,7 @@ pipeline {
       }
     }
 
-    stage('') {
+    stage('Notify') {
       steps {
         echo 'echo notify'
       }
