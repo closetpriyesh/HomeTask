@@ -5,19 +5,19 @@ retry(1)
 }
 agent any 
 stages {
-stage('checkout') {
-steps {
-echo 'Checking out!!'
-}
-}
 stage('build') {
 steps {
-echo 'Building out!!'
+echo 'Building!!'
+}
+}
+stage('test') {
+steps {
+echo 'Testing!!'
 }}
 
-stage('archive') {
+stage('notify') {
 steps {
-echo 'Archiving out!!'
+echo 'Notifying!!'
 }}
 }
 }
