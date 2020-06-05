@@ -1,0 +1,11 @@
+node {
+    env.PATH = "C:/Users/Priyesh_Kumar/Downloads/apache-maven-3.6.3-bin/apache-maven-3.6.3/bin;c:\\Windows\\System32"
+    stage('checkout')
+    git 'https://github.com/closetpriyesh/HomeTask.git'
+    stage('build')
+    bat label: '', script: 'call HelloWorld.bat'
+    stage('test')
+    echo 'test'
+    stage('notify')
+    echo 'notify'
+}
