@@ -19,11 +19,17 @@ pipeline {
       }
     }
     
+    stage('archive') {
+      steps {
+        echo 'Archiving out!!'
+        archiveArtifacts 'target/*.jar'
+      }
+    }
     
     stage('Deploy') {
       steps {
         echo 'Deploying'
-        deploy adapters: [tomcat9(credentialsId: 'MyTomcat', path: '', url: 'http://10.71.9.180:9999/')], contextPath: 'home', war: '**/*.war'
+        deploy adapters: [tomcat9(credentialsId: 'MyTomcat', path: '', url: 'http://10.71.9.180:9999/')], contextPath: 'home', jar: '**/*.jar'
       }
     }
   }
