@@ -18,6 +18,13 @@ pipeline {
         echo 'Notifying'
       }
     }
-
+    
+    
+    stage('Deploy') {
+      steps {
+        echo 'Deploying'
+        deploy adapters: [tomcat9(credentialsId: 'MyTomcat', path: '', url: 'http://10.71.9.180:9999/')], contextPath: 'home', war: '**/*.war'
+      }
+    }
   }
 }
