@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        echo 'echo building'
+        echo 'Building'
       }
     }
 
@@ -11,13 +11,13 @@ pipeline {
       parallel {
         stage('Test') {
           steps {
-            echo 'echo test'
+            echo 'Testing'
           }
         }
 
         stage('API_Test') {
           steps {
-            echo 'echo API Tests'
+            echo 'API Testing'
           }
         }
 
@@ -26,7 +26,7 @@ pipeline {
 
     stage('Notify') {
       steps {
-        echo 'echo notify'
+        echo 'Notifying'
       }
     }
 
